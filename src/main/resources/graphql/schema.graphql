@@ -1,0 +1,7 @@
+type Query {
+    getTwoF: [TwoF]
+}
+
+type TwoF {
+    name: String!
+}
