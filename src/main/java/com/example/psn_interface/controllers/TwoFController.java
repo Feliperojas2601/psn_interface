@@ -6,6 +6,7 @@ import com.example.psn_interface.entities.TwoF;
 
 @Controller
 public class TwoFController {
+
   @QueryMapping
   public TwoF getTwoF() {
       return new TwoF("TwoF");
