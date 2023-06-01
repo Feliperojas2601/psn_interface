@@ -1,4 +1,4 @@
-package com.example.psn_interface.SoapServer;
+package com.example.psn_interface.soapConfig;
 
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
