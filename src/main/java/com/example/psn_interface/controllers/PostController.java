@@ -16,7 +16,7 @@ public class PostController {
 
 	public PostType getWelcomePost(GetPostRequest request) {
 		PostType response = new PostType();
-		Post postData= repository.getPost();
+		Post postData = repository.getPost();
 		response.setPostId(postData._id());
 		response.setOwnerId(postData.ownerId());
 		response.setLocation(postData.location());
