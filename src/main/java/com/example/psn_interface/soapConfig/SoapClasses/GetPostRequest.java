@@ -8,7 +8,7 @@
 
 package com.example.psn_interface.soapConfig.SoapClasses;
 
-import jakarta.xml.bind.annotation.*;
+import javax.xml.bind.annotation.*;
 
 
 /**

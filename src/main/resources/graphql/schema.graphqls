@@ -1,9 +1,10 @@
 type Query {
-    getTwoF: TwoF!
+    getProduct: Product!
 }
 
-type TwoF {
-    name: String!
+type Product {
+    name: String!, 
+    price: Int!
 }
 
 

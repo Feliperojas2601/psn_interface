@@ -5,5 +5,5 @@
 // Generated on: 2023.06.01 at 01:15:12 AM COT 
 //
 
-@jakarta.xml.bind.annotation.XmlSchema(namespace = "http://localhost/soap/api/WelcomePost", elementFormDefault = jakarta.xml.bind.annotation.XmlNsForm.QUALIFIED)
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://localhost/soap/api/WelcomePost", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
 package com.example.psn_interface.soapConfig.SoapClasses;

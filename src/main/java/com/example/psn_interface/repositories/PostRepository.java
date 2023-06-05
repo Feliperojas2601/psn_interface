@@ -22,16 +22,14 @@ public class PostRepository {
 
     public Post getPost() {
         //language=GraphQL
-        String document = """
-          query {
-              findWelcomePost {
-                _id
-                ownerId
-                location
-                description
-              }
-        }
-        """;
+        String document = "query {\n" +
+                  "    findWelcomePost {\n" +
+                  "        _id\n" +
+                  "        ownerId\n" +
+                  "        location\n" +
+                  "        description\n" +
+                  "    }\n" +
+        "}";
 
         Mono <Post> response = graphQlClient.document(document)
                 .retrieve("findWelcomePost").toEntity(Post.class);
