@@ -15,7 +15,7 @@ public class PostRepository {
     public PostRepository() {
         WebClient client = WebClient.builder()
                 //URL de la API
-                .baseUrl("http://35.231.215.205/")
+                .baseUrl("http://34.138.199.167/")
                 .build();
         graphQlClient = HttpGraphQlClient.builder(client).build();
     }
