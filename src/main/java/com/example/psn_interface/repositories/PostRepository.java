@@ -13,7 +13,7 @@ public class PostRepository {
     public PostRepository() {
         WebClient client = WebClient.builder()
                 //URL de la API
-                .baseUrl("http://34.138.199.167/")
+                .baseUrl("http://psn-ag-service:4500/")
                 .build();
         graphQlClient = HttpGraphQlClient.builder(client).build();
     }
