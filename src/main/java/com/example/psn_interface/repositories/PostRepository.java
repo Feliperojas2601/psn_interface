@@ -29,10 +29,9 @@ public class PostRepository {
                   "    }\n" +
         "}";
 
-        var response = graphQlClient.document(document).retrieve("findWelcomePost");
-        System.out.println(response);
+        Mono <Post> response = graphQlClient.document(document).retrieve("findWelcomePost").toEntity(Post.class);
 
-        /*response.subscribe(
+        response.subscribe(
                 post -> {
                     System.out.println("Consulta exitosa:");
                     System.out.println(post);
@@ -42,32 +41,6 @@ public class PostRepository {
                 }
         );
 
-
-        url = "https://api.skillsly.app/graphql";
-
-        UserDto result = new UserDto();
-
-        final String query = GraphqlSchemaReaderUtil.getSchemaFromFileName("getUserDetails.graphql");
-
-        WebClient webClient = WebClient.builder().build();
-        GraphqlRequestBody graphQLRequestBody = new GraphqlRequestBody();
-
-        final String variables = GraphqlSchemaReaderUtil.getSchemaFromFileName("variables.graphql");
-
-        graphQLRequestBody.setQuery(query);
-        graphQLRequestBody.setVariables(variables.replace("userId", userId));
-
-        var res = webClient.post().uri(url).bodyValue(graphQLRequestBody).retrieve().bodyToMono(UserResponseDto.class)
-                .block();
-
-        assert res != null;
-        result.setEmail(res.getData().getUser().getEmail());
-        result.setName(res.getData().getUser().getName());
-        result.setId(res.getData().getUser().getId());
-        return result;
-         */
-
-
-        return response;
+        return response.block();
     }
 }

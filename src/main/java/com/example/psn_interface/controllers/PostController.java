@@ -17,10 +17,10 @@ public class PostController {
 	public PostType getWelcomePost(GetPostRequest request) {
 		PostType response = new PostType();
 		Post postData = repository.getPost();
-		response.setPostId(postData._id());
-		response.setOwnerId(postData.ownerId());
-		response.setLocation(postData.location());
-		response.setDescription(postData.description());
+		response.setPostId(postData.get_id());
+		response.setOwnerId(postData.getOwnerId());
+		response.setLocation(postData.getLocation());
+		response.setDescription(postData.getDescription());
 		return response;
 	}
 }
